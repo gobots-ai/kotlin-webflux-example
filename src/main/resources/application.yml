@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: kotlin-webflux
+  data:
+    mongodb:
+      username: root
+      password: root
+      database: example
+      host: localhost
+  jackson:
+    visibility.field: any
+
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+springdoc:
+  packages-to-scan: me.moriya.example.resource
+  api-docs:
+    path: /api.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
